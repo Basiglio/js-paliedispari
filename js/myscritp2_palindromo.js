@@ -9,7 +9,7 @@ console.log(userWord);
 
 
 // CREO FUNZIONE
-function revString(str) {
+function isPalindrome(str) {
 // SPLITTO LE LETTERE
 var splString = str.split("");
 // FACCIO REVERSE LETTERE
@@ -19,7 +19,7 @@ return revArray.join("");
 console.log(revArray);
 }
 // UTILIZZO LA FUNZIONE CREATA
-var conversione = revString(userWord);
+var conversione = isPalindrome(userWord);
 console.log(conversione);
 
 if (userWord == conversione) {
