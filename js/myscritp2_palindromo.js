@@ -22,6 +22,8 @@ console.log(revArray);
 var conversione = revString(userWord);
 console.log(conversione);
 
-// if (true) {
-//
-// }
+if (userWord == conversione) {
+  alert("Complimenti la tua Parola è un palindromo")
+} else {
+  alert("La tua Parola non è un palindromo")
+}
