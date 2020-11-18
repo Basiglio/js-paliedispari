@@ -3,16 +3,25 @@
 // Creare una funzione per capire se la parola inserita è palindroma.
 
 
-// var userWord = isPalindrome(prompt("Scrivi una parola"));
+// CHIEDO PAROLA
 var userWord = prompt("Scrivi qua una parola");
 console.log(userWord);
 
-var conversione = revString(userWord);
-console.log(conversione);
 
+// CREO FUNZIONE
 function revString(str) {
+// SPLITTO LE LETTERE
 var splString = str.split("");
+// FACCIO REVERSE LETTERE
 var revArray = splString.reverse();
+// RIUNISCO LE LETTERE
 return revArray.join("");
 console.log(revArray);
 }
+// UTILIZZO LA FUNZIONE CREATA
+var conversione = revString(userWord);
+console.log(conversione);
+
+// if (true) {
+//
+// }
