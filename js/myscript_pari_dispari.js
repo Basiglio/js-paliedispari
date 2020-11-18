@@ -8,11 +8,24 @@
 
 
 // SCELTE UTENTE
+// PAri o dispari?
 var pariOdispari = prompt("scrivi pari o dispari")
 console.log("io ho scelto ", pariOdispari);
+// Se non mette pari e dispari
+while ((pariOdispari != "pari") && (pariOdispari != "dispari")) {
+  alert("errore devi inserire pari o dispari");
+  pariOdispari = prompt("scrivi pari o dispari");
+}
+// NUMERO
 var userNumber = parseInt(prompt("ora inserisci un numero da 1 a 5"));
 console.log("il mio numero ", userNumber);
+// se non mette numero maggiore di 0 o minore 6
+while ((userNumber < 1) || (userNumber > 5 )) {
+  alert("errore devi inserire un numero da 1 a 5");
+  userNumber = parseInt(prompt("ora inserisci un numero da 1 a 5"));
+}
 // SCELTE PC
+
 pcNumber = pcRandomNumber();
 
 // SOMMA
