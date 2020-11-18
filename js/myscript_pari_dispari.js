@@ -13,13 +13,10 @@ console.log("io ho scelto ", pariOdispari);
 var userNumber = parseInt(prompt("ora inserisci un numero da 1 a 5"));
 console.log("il mio numero ", userNumber);
 // SCELTE PC
-var pcNumber = Math.floor(Math.random() * 5) + 1;
-console.log("il numero del pc ", pcNumber);
-
+pcNumber = pcRandomNumber();
 
 // SOMMA
-var somma = userNumber + pcNumber;
-console.log(somma);
+somma = somma();
 
 if (somma % 2 == 0 && pariOdispari == "pari") {
   alert("hai vinto")
@@ -33,4 +30,18 @@ if (somma % 2 == 0 && pariOdispari == "pari") {
 } else if (somma % 2 != 0 && pariOdispari == "pari") {
   alert("hai perso")
   console.log("hai perso");
+}
+
+
+// FUNZIONI
+function pcRandomNumber(pcNumber) {
+  var pcNumber = Math.floor(Math.random() * 5) + 1;
+  console.log("il numero del pc ", pcNumber);
+  return pcNumber;
+}
+
+function somma(somma) {
+  var somma = userNumber + pcNumber;
+  console.log(somma);
+  return somma;
 }
