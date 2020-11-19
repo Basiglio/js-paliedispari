@@ -27,34 +27,38 @@ while ((userNumber < 1) || (userNumber > 5 )) {
 // SCELTE PC
 
 pcNumber = pcRandomNumber();
+console.log("il numero del pc ", pcNumber);
 
 // SOMMA
 somma = somma();
+console.log(somma);
 
-if (somma % 2 == 0 && pariOdispari == "pari") {
-  alert("hai vinto")
-  console.log("hai vinto");
-} else if (somma % 2 == 0 && pariOdispari == "dispari") {
-  alert("hai perso")
-  console.log("hai perso");
-} else if (somma % 2 != 0 && pariOdispari == "dispari") {
-  alert("hai vinto")
-  console.log("hai vinto");
-} else if (somma % 2 != 0 && pariOdispari == "pari") {
-  alert("hai perso")
-  console.log("hai perso");
-}
-
-
+risultato(somma);
+//--------------------------------------------------------------
 // FUNZIONI
-function pcRandomNumber(pcNumber) {
+function pcRandomNumber(numero) {
   var pcNumber = Math.floor(Math.random() * 5) + 1;
-  console.log("il numero del pc ", pcNumber);
   return pcNumber;
 }
 
 function somma(somma) {
   var somma = userNumber + pcNumber;
-  console.log(somma);
   return somma;
+}
+
+function risultato(numero) {
+  if (somma % 2 == 0 && pariOdispari == "pari") {
+    alert("hai vinto")
+    // console.log("hai vinto");
+  } else if (somma % 2 == 0 && pariOdispari == "dispari") {
+    alert("hai perso")
+    // console.log("hai perso");
+  } else if (somma % 2 != 0 && pariOdispari == "dispari") {
+    alert("hai vinto")
+    // console.log("hai vinto");
+  } else {
+    alert("hai perso")
+    // console.log("hai perso");
+  }
+
 }
